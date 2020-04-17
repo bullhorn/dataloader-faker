@@ -39,16 +39,16 @@ function generate(template) {
         // Replace row number, options and faker
         Object.keys(template).forEach(key => {
             row[key] = template[key]
-                .replace(/\{\{i\}\}/ig, i + 1)
-                .replace(/\{\{.+\}\}/ig, (match) => faker.fake(match))
-                .replace(/^\[\[(.+)\]\]$/ig, (match, $1) => {
+                .replace(/{{i}}/ig, i + 1)
+                .replace(/{{.+}}/ig, (match) => faker.fake(match))
+                .replace(/^\[\[(.+)]]$/ig, (match, $1) => {
                     const options = $1.split('|');
                     return options[i % options.length];
                 });
         });
         // Replace column names with values of other columns
         Object.keys(row).forEach(key => {
-            row[key] = row[key].replace(/\$\{(.+)\}/ig, (match, $1) => row[$1] ? row[$1] : '');
+            row[key] = row[key].replace(/\${(.+)}/ig, (match, $1) => row[$1] ? row[$1] : '');
         });
         output.push(row);
     }
