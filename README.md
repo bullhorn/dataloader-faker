@@ -51,3 +51,9 @@ When provided the number of rows = `n`, this will generate:
  - `n` Candidates
  - `3n` Job Submissions, three per Candidate at one Job
  - `n` Placements, one per Candidate at one Job 
+
+To load all of these records into a test corp, point Data Loader at the directory:
+
+```
+dataloader load ../path/to/examples
+```
