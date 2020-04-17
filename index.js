@@ -17,24 +17,40 @@ const argv = require('yargs')
     .argv;
 const csv = require('fast-csv');
 const faker = require('faker');
+const fs = require('fs');
+const path = require('path');
 
-let template = null;
-csv.parseFile(argv.t, { headers: true, strictColumnHandling: true, trim: true })
-    .on('data', (row) => {
-        if (!template) {
-            template = row;
-        }
-    })
-    .on('end', () => {
-        generate(template);
-    })
-    .on('error', (err) => {
-        console.error(err);
-    });
+// Handle directory or single file
+if (fs.lstatSync(argv.t).isDirectory()) {
+    const dir = fs.opendirSync(argv.t);
+    let dirEntry = null;
+    while ((dirEntry = dir.readSync()) !== null) {
+        parseTemplateAndGenerate(path.join(dir.path, dirEntry.name), path.join(argv.o, dirEntry.name), argv.r);
+    }
+    dir.closeSync();
+} else {
+    parseTemplateAndGenerate(argv.t, argv.o, argv.r);
+}
 
-function generate(template) {
-    let output = [];
-    for (let i = 0; i < argv.r; i++) {
+function parseTemplateAndGenerate(templateFile, outputFile, rows) {
+    let template = null;
+    csv.parseFile(templateFile, { headers: true, strictColumnHandling: true, trim: true })
+        .on('data', (row) => {
+            if (!template) {
+                template = row;
+            }
+        })
+        .on('end', () => {
+            generate(template, outputFile, rows);
+        })
+        .on('error', (err) => {
+            console.error(err);
+        });
+}
+
+function generate(template, outputFile, rows) {
+    let generatedRows = [];
+    for (let i = 0; i < rows; i++) {
         const row = {};
         // Replace row number, options and faker
         Object.keys(template).forEach(key => {
@@ -50,8 +66,8 @@ function generate(template) {
         Object.keys(row).forEach(key => {
             row[key] = row[key].replace(/\${(.+)}/ig, (match, $1) => row[$1] ? row[$1] : '');
         });
-        output.push(row);
+        generatedRows.push(row);
     }
-    csv.writeToPath(argv.o, output, { headers: true });
-    console.log('Wrote', argv.r, 'lines to:', argv.o);
+    csv.writeToPath(outputFile, generatedRows, { headers: true });
+    console.log('Wrote', rows, 'lines to:', outputFile);
 }
