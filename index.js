@@ -68,6 +68,9 @@ function generate(template, outputFile, rows) {
         });
         generatedRows.push(row);
     }
+    if (!fs.existsSync(path.dirname(outputFile))) {
+        fs.mkdirSync(path.dirname(outputFile));
+    }
     csv.writeToPath(outputFile, generatedRows, { headers: true });
     console.log('Wrote', rows, 'lines to:', outputFile);
 }
