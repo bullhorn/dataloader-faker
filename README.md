@@ -1,6 +1,6 @@
 # Data Loader Faker
 
-Generate massive amounts of realistic fake CSV data for testing
+Generate massive amounts of realistic fake CSV data for [Data Loader](https://github.com/bullhorn/dataloader)
 
 ### Usage
 
