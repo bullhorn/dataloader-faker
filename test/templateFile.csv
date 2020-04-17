@@ -1,0 +1,2 @@
+externalID         ,firstName         ,lastName           ,name                    ,address.city    ,address.state    ,status
+candidate-ext-{{i}},{{name.firstName}},O'{{name.lastName}},${firstName} ${lastName},{{address.city}},{{address.state}},[[Active|Placed|Hold|Archive]]

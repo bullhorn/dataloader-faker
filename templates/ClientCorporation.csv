@@ -1,0 +1,2 @@
+externalID                 ,name                   ,companyDescription     ,companyURL      ,phone                ,status             ,address.address1         ,address.address2            ,address.city    ,address.state        ,address.zip        ,address.countryName
+clientCorporation-ext-{{i}},{{company.companyName}},{{company.catchPhrase}},{{internet.url}},{{phone.phoneNumber}},[[Active|Inactive]],{{address.streetAddress}},{{address.secondaryAddress}},{{address.city}},{{address.stateAbbr}},{{address.zipCode}},United States

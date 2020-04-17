@@ -1,0 +1,25 @@
+{
+  "name": "dataloader-faker",
+  "version": "1.0.0",
+  "description": "Generate massive amounts of realistic fake CSV data for testing",
+  "license": "AGPL-3.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm start -- --template test/templateFile.csv --output test/outputFile.csv --rows 10",
+    "examples": "npm start -- --template templates --output generated --rows 1000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bullhorn/dataloader-faker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bullhorn/dataloader-faker/issues"
+  },
+  "homepage": "https://github.com/bullhorn/dataloader-faker#readme",
+  "dependencies": {
+    "faker": "4.1.0",
+    "fast-csv": "4.1.3",
+    "yargs": "15.3.1"
+  }
+}

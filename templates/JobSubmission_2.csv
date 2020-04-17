@@ -1,0 +1,2 @@
+candidate.externalID,jobOrder.externalID,dateAdded    ,status   ,comments                      ,billRate,payRate,salary,isDeleted,isHidden
+candidate-ext-{{i}} ,jobOrder-ext-{{i}} ,3/30/20 12:00,Confirmed,Moving Submission to Confirmed,75      ,45     ,90000 ,FALSE    ,FALSE
