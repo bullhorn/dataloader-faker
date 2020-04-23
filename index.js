@@ -57,7 +57,7 @@ function generate(template, outputFile, rows) {
             row[key] = template[key]
                 .replace(/{{i}}/ig, i + 1)
                 .replace(/{{.+}}/ig, (match) => faker.fake(match))
-                .replace(/\[\[(.+)]]$/ig, (match, $1) => {
+                .replace(/\[\[(.+)]]/ig, (match, $1) => {
                     const options = $1.split('|');
                     return options[i % options.length];
                 });

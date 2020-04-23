@@ -1,0 +1,2 @@
+name                     ,subject                                                                                  ,messageText
+invoiceTemplate-ext-{{i}},[[Payment In Advance|Cash In Advance|Net 7|Net 21|Net 30|End Of Month]] Invoice Statement,To whom it may concern: Here is your ${subject}. Please pay appropriately
