@@ -1,2 +1,2 @@
-externalAccountNumber         ,externalAccountName    ,externalAccountType        ,externalAccountDetailType,isPay         ,isBill        ,isAccountsReceivable,isActive,isDeleted
-generalLedgerAccount-ext-{{i}},{{finance.accountName}},{{finance.transactionType}},{{finance.account}}      ,[[TRUE|FALSE]],[[FALSE|TRUE]],[[TRUE|FALSE]]      ,TRUE    ,FALSE
+externalAccountNumber,externalAccountName    ,externalAccountType        ,externalAccountDetailType,isPay         ,isBill        ,isAccountsReceivable,isActive,isDeleted
+gla-ext-{{i}}        ,{{finance.accountName}},{{finance.transactionType}},{{finance.account}}      ,[[TRUE|FALSE]],[[FALSE|TRUE]],[[TRUE|FALSE]]      ,TRUE    ,FALSE
