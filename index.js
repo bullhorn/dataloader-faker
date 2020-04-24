@@ -2,15 +2,19 @@ const argv = require('yargs')
     .usage('Usage: $0 [options]')
     .example('$0 -t templateFile.csv -o outputFile.csv -c 1000', 'generates 1000 lines of fake data into the outputFile based on the templateFile')
     .example('$0 --template templateFile.csv --output outputFile.csv --rows 50', 'generates 50 lines of fake data into the outputFile based on the templateFile')
+    .example('$0 --template templateFile.csv --output outputFile.csv --rows 10000 --start 10000', 'generates 10000 lines of fake data starting the id fields at 10001')
     .alias('t', 'template')
     .alias('o', 'output')
     .alias('r', 'rows')
+    .alias('s', 'start')
     .nargs('t', 1)
     .nargs('o', 1)
     .nargs('r', 1)
+    .nargs('s', 1)
     .describe('t', 'the template file which describes what data is to be faked')
     .describe('o', 'the output file which points to the file to create as the output of this script')
     .describe('r', 'the number of records to fake')
+    .describe('s', 'the starting index of the generated rows, for creating additional records')
     .demandOption(['t', 'o', 'r'])
     .help('h')
     .alias('h', 'help')
@@ -52,12 +56,13 @@ function parseTemplateAndGenerate(templateFile, outputFile, rows) {
 
 function generate(template, outputFile, rows) {
     let generatedRows = [];
+    const start = argv.s ? argv.s : 0;
     for (let i = 0; i < rows; i++) {
         const row = {};
         // Replace row number, options and faker
         Object.keys(template).forEach(key => {
             row[key] = template[key]
-                .replace(/{{i}}/ig, i + 1)
+                .replace(/{{i}}/ig, start + i + 1)
                 .replace(/{{.+}}/ig, (match) => faker.fake(match))
                 .replace(/\[\[(.+)]]/ig, (match, $1) => {
                     const options = $1.split('|');

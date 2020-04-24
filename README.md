@@ -37,10 +37,16 @@ A template file contains two rows:
 The templates directory contains an entire corporation full of fake data. Each entity will reference other entities in
 the same directory, same as the [dataloader examples](https://github.com/bullhorn/dataloader/tree/master/examples).
 Each entity file should contain the same number of rows as the other entities, and they can all be generated together
-by providing the number of desired rows.
+by providing the number of desired rows. Lookup entities are the exception - there are only 10 of each generated.
 
 ```
+// generate 10,000 records along with lookup entities
 npm run generate 10000
+```
+
+```
+// follow-on generation of 10,000 additional records, starting with id: 10001
+npm start -- -t templates -o generated -r 10000 -s 10000
 ```
 
 When provided the number of rows = `n`, this will generate:
@@ -50,7 +56,12 @@ When provided the number of rows = `n`, this will generate:
  - `n` Jobs, one per company
  - `n` Candidates
  - `3n` Job Submissions, three per Candidate at one Job
- - `n` Placements, one per Candidate at one Job 
+ - `n` Placements, one per Candidate at one Job
+ - `n` Locations, one per Company
+ - `n` Invoice terms, one per Company
+ - `n` Billing Profiles, one per Company
+ - 10 General Ledger Accounts
+ - 10 Invoice Statement Message Templates
 
 To load all of these records into a test corp, point Data Loader at the directory:
 
