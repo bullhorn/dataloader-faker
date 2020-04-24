@@ -40,7 +40,7 @@ Each entity file should contain the same number of rows as the other entities, a
 by providing the number of desired rows.
 
 ```
-npm run examples 10000
+npm run generate 10000
 ```
 
 When provided the number of rows = `n`, this will generate:
@@ -55,5 +55,5 @@ When provided the number of rows = `n`, this will generate:
 To load all of these records into a test corp, point Data Loader at the directory:
 
 ```
-dataloader load ../path/to/examples
+dataloader load ../path/to/generated
 ```

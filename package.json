@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "npm start -- --template test/templateFile.csv --output test/outputFile.csv --rows 10",
-    "examples": "npm start -- --template templates --output generated --rows "
+    "generate": "npm start -- --template templates/lookup --output generated --rows 10 && npm start -- --template templates --output generated --rows "
   },
   "repository": {
     "type": "git",

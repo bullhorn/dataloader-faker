@@ -25,7 +25,9 @@ if (fs.lstatSync(argv.t).isDirectory()) {
     const dir = fs.opendirSync(argv.t);
     let dirEntry = null;
     while ((dirEntry = dir.readSync()) !== null) {
-        parseTemplateAndGenerate(path.join(dir.path, dirEntry.name), path.join(argv.o, dirEntry.name), argv.r);
+        if (dirEntry.isFile()) {
+            parseTemplateAndGenerate(path.join(dir.path, dirEntry.name), path.join(argv.o, dirEntry.name), argv.r);
+        }
     }
     dir.closeSync();
 } else {
