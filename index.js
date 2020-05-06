@@ -16,8 +16,6 @@ const argv = require('yargs')
     .describe('r', 'the number of records to fake')
     .describe('s', 'the starting index of the generated rows, for creating additional records')
     .demandOption(['t', 'o', 'r'])
-    .help('h')
-    .alias('h', 'help')
     .argv;
 const csv = require('fast-csv');
 const faker = require('faker');
