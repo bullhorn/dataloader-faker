@@ -46,7 +46,7 @@ npm run generate 10000
 
 ```
 // follow-on generation of 10,000 additional records, starting with id: 10001
-npm start -- -t templates -o generated -r 10000 -s 10000
+npm start -- -t templates -o generated -r 10000 -s 10001
 ```
 
 When provided the number of rows = `n`, this will generate:
