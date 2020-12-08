@@ -19,7 +19,7 @@
   "homepage": "https://github.com/bullhorn/dataloader-faker#readme",
   "dependencies": {
     "faker": "4.1.0",
-    "fast-csv": "4.1.3",
+    "fast-csv": "4.3.6",
     "yargs": "15.3.1"
   }
 }
