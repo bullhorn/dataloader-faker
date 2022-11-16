@@ -5,7 +5,7 @@ Generate massive amounts of realistic fake CSV data for [Data Loader](https://gi
 ### Usage
 
 Given a template file and a location of an output file to generate, this method will generate
- an output file based on the provided template that contains the number of rows desired. 
+ an output file based on the provided template that contains the number of rows desired.
 
 ```
 npm install
@@ -20,18 +20,18 @@ A template file contains two rows:
 
 #### Replacements
 
- - `{{<faker.dataType>}}` = replace with [Faker.js](https://github.com/marak/Faker.js/) generated data. 
-     See [faker docs](http://marak.github.io/faker.js/#toc9__anchor) for available options.
+ - `{{<faker.dataType>}}` = replace with [faker-js](https://fakerjs.dev/) generated data.
+     See [faker-js docs](https://fakerjs.dev/api/) for available options.
      - Example: `{{name.lastName}}, {{name.firstName}} {{name.suffix}}` will generate random values for each row,
        formatted as: `Corkery, Chaya Jr.`, `Rippin, Tevin II`, etc.
  - `{{i}}` = replace with row number
      - Example: `candidate-{{i}}` will generate `candidate-1`, `candidate-2`, etc.
- - `${<otherColumnName>}` = replace with the value of another column, allowing columns to contain values 
+ - `${<otherColumnName>}` = replace with the value of another column, allowing columns to contain values
      from one or more generated columns.
      - Example: `${firstName} ${middleName} ${lastName}` will format three generated columns into one resulting column.
- - `[[Option A|Option B|Option C|Option D]]` = replace with one of the given options in the vertical bar 
+ - `[[Option A|Option B|Option C|Option D]]` = replace with one of the given options in the vertical bar
      separated double bracket list. Simply cycles through the options on each row for an even distribution.
-     
+
 ### Examples
 
 The templates directory contains an entire corporation full of fake data. Each entity will reference other entities in
