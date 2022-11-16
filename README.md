@@ -21,7 +21,7 @@ A template file contains two rows:
 #### Replacements
 
  - `{{<faker.dataType>}}` = replace with [faker-js](https://fakerjs.dev/) generated data.
-     See [faker-js docs](https://fakerjs.dev/api/) for available options.
+     See [faker-js docs](https://fakerjs.dev/guide/) for available options.
      - Example: `{{name.lastName}}, {{name.firstName}} {{name.suffix}}` will generate random values for each row,
        formatted as: `Corkery, Chaya Jr.`, `Rippin, Tevin II`, etc.
  - `{{i}}` = replace with row number
