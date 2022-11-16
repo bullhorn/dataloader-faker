@@ -18,7 +18,7 @@ const argv = require('yargs')
     .demandOption(['t', 'o', 'r'])
     .argv;
 const csv = require('fast-csv');
-const faker = require('faker');
+const { faker } = require('@faker-js/faker');
 const fs = require('fs');
 const path = require('path');
 
@@ -61,7 +61,7 @@ function generate(template, outputFile, rows) {
         Object.keys(template).forEach(key => {
             row[key] = template[key]
                 .replace(/{{i}}/ig, start + i)
-                .replace(/{{.+}}/ig, (match) => faker.fake(match))
+                .replace(/{{.+}}/ig, (match) => faker.helpers.fake(match))
                 .replace(/\[\[(.+)]]/ig, (match, $1) => {
                     const options = $1.split('|');
                     return options[i % options.length];
