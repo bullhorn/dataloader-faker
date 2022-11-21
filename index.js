@@ -21,6 +21,7 @@ const csv = require('fast-csv');
 const { faker } = require('@faker-js/faker');
 const fs = require('fs');
 const path = require('path');
+const { format } = require('date-fns');
 
 // Handle directory or single file
 if (fs.lstatSync(argv.t).isDirectory()) {
@@ -38,7 +39,7 @@ if (fs.lstatSync(argv.t).isDirectory()) {
 
 function parseTemplateAndGenerate(templateFile, outputFile, rows) {
     let template = null;
-    csv.parseFile(templateFile, { headers: true, strictColumnHandling: true, trim: true })
+    csv.parseFile(templateFile, { headers: true, strictColumnHandling: true, trim: true})
         .on('data', (row) => {
             if (!template) {
                 template = row;
@@ -61,6 +62,7 @@ function generate(template, outputFile, rows) {
         Object.keys(template).forEach(key => {
             row[key] = template[key]
                 .replace(/{{i}}/ig, start + i)
+                .replace(/{{date.+}}/ig, (match) => format(new Date(faker.helpers.fake(match)), "yyyy-MM-dd HH:mm:ss"))
                 .replace(/{{.+}}/ig, (match) => faker.helpers.fake(match))
                 .replace(/\[\[(.+)]]/ig, (match, $1) => {
                     const options = $1.split('|');

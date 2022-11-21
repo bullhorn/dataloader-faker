@@ -19,6 +19,7 @@
   "homepage": "https://github.com/bullhorn/dataloader-faker#readme",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
+    "date-fns": "^2.29.3",
     "fast-csv": "4.3.6",
     "yargs": "16.2.0"
   }
