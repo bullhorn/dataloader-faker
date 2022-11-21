@@ -39,7 +39,7 @@ if (fs.lstatSync(argv.t).isDirectory()) {
 
 function parseTemplateAndGenerate(templateFile, outputFile, rows) {
     let template = null;
-    csv.parseFile(templateFile, { headers: true, strictColumnHandling: true, trim: true})
+    csv.parseFile(templateFile, { headers: true, strictColumnHandling: true, trim: true })
         .on('data', (row) => {
             if (!template) {
                 template = row;
