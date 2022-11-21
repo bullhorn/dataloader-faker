@@ -24,6 +24,10 @@ A template file contains two rows:
      See [faker-js docs](https://fakerjs.dev/guide/) for available options.
      - Example: `{{name.lastName}}, {{name.firstName}} {{name.suffix}}` will generate random values for each row,
        formatted as: `Corkery, Chaya Jr.`, `Rippin, Tevin II`, etc.
+- `{{<faker.date}}` = replace with [faker-js](https://fakerjs.dev/) generated data and if the date module is used, formatted as yyyy-MM-dd HH:mm:ss.
+     - Example: `{{date.recent(30)}}, {{date.birthdate}}` will generate random date values for each row,
+       formatted as: `2022-11-10 06:21:53`,`1961-06-04 04:06:13`, etc.
+     - Note: Currently it is not possible to set more than a single parameter since faker.helpers.fake() does not support it.
  - `{{i}}` = replace with row number
      - Example: `candidate-{{i}}` will generate `candidate-1`, `candidate-2`, etc.
  - `${<otherColumnName>}` = replace with the value of another column, allowing columns to contain values
