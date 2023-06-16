@@ -5,9 +5,9 @@
   "license": "AGPL-3.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "npm start -- --template test/templateFile.csv --output test/outputFile.csv --rows 10",
-    "generate": "npm start -- --template templates/lookup --output generated --rows 10 && npm start -- --template templates --output generated --rows "
+    "start": "npm run generate -- --template templates/lookup --output generated --rows 10 && npm run generate -- --template templates --output generated --rows ",
+    "test": "npm run generate -- --template test/templateFile.csv --output test/outputFile.csv --rows 10",
+    "generate": "node index.js"
   },
   "repository": {
     "type": "git",
