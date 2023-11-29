@@ -1,2 +1,0 @@
-customText1              ,candidate.externalID,jobOrder.externalID,dateAdded    ,status,comments         ,billRate,payRate,salary,isDeleted,isHidden
-jobSubmission-3-ext-{{i}},candidate-ext-{{i}} ,jobOrder-ext-{{i}} ,4/04/20 12:00,Placed,Created Placement,80      ,50     ,100000 ,FALSE    ,FALSE

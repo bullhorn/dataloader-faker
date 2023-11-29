@@ -1,0 +1,2 @@
+candidate.externalID,taskUUID                     ,subject    ,description             ,dateBegin     ,dateEnd        ,isCompleted,isDeleted,isPrivate,isSystemTask,notificationMinutes,priority,type
+Task-1000           ,${candidate.externalID}-{{i}},${taskUUID},${taskUUID} Description.,9/8/2023 12:00,12/1/2024 12:00,FALSE      ,FALSE    ,FALSE    ,FALSE       ,                 15,       1,Call

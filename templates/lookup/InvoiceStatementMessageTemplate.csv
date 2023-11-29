@@ -1,2 +1,0 @@
-name                     ,subject                                                                                                                    ,messageText
-invoiceTemplate-ext-{{i}},[[Payment In Advance|Cash In Advance|Net 7|Net 14|Net 21|Net 30|End Of Month|Whole 10|Whole 20|Whole 30]] Invoice Statement,To whom it may concern: Here is your ${subject}. Please pay appropriately.

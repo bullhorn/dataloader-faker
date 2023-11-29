@@ -5,7 +5,12 @@
   "license": "AGPL-3.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm run generate -- --template templates/lookup --output generated --rows 10 && npm run generate -- --template templates --output generated --rows ",
+    "start": "npm run generate-base && npm run generate-100 && npm run generate-500 && npm run generate-1000 && npm run generate-5000",
+    "generate-base": "npm run generate -- --template templates --output generated --rows 4",
+    "generate-100": "npm run generate -- --template templates/100 --output generated --rows 100",
+    "generate-500": "npm run generate -- --template templates/500 --output generated --rows 500",
+    "generate-1000": "npm run generate -- --template templates/1000 --output generated --rows 1000",
+    "generate-5000": "npm run generate -- --template templates/5000 --output generated --rows 5000",
     "test": "npm run generate -- --template test/templateFile.csv --output test/outputFile.csv --rows 10",
     "generate": "node index.js"
   },
@@ -18,8 +23,8 @@
   },
   "homepage": "https://github.com/bullhorn/dataloader-faker#readme",
   "dependencies": {
-    "@faker-js/faker": "^7.6.0",
+    "@faker-js/faker": "^8.3.1",
     "fast-csv": "4.3.6",
-    "yargs": "16.2.0"
+    "yargs": "17.7.2"
   }
 }

@@ -1,0 +1,2 @@
+externalID                         ,name         ,companyDescription,companyURL   ,status
+JobSubmission-[[100|500|1000|5000]],${externalID},${externalID}     ,${externalID},Active
