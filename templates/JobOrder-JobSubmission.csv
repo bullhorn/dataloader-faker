@@ -1,2 +1,2 @@
-externalID                         ,clientCorporation.externalID,clientContact.externalID,title        ,description                                 ,publicDescription
-JobSubmission-[[100|500|1000|5000]],${externalID}               ,${externalID}           ,${externalID},Used for kicking off index associated events,Used for kicking off index associated events
+externalID                               ,clientCorporation.externalID,clientContact.externalID,title        ,description                                 ,publicDescription
+JobSubmission-[[100|500|1000|5000|10000]],${externalID}               ,${externalID}           ,${externalID},Used for kicking off index associated events,Used for kicking off index associated events

@@ -1,2 +1,2 @@
-externalID                         ,customText1  ,firstName    ,lastName     ,email                    ,description                                 ,status,isDeleted,massMailOptOut
-JobSubmission-[[100|500|1000|5000]],${externalID},${externalID},${externalID},${externalID}@example.org,Used for kicking off index associated events,Active,FALSE    ,TRUE
+externalID                               ,customText1  ,firstName    ,lastName     ,email                    ,description                                 ,status,isDeleted,massMailOptOut
+JobSubmission-[[100|500|1000|5000|10000]],${externalID},${externalID},${externalID},${externalID}@example.org,Used for kicking off index associated events,Active,FALSE    ,TRUE
