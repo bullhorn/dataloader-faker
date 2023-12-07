@@ -1,2 +1,2 @@
-externalID                               ,customText1  ,clientCorporation.externalID,firstName    ,lastName     ,email                    ,status,isDeleted
-JobSubmission-[[100|500|1000|5000|10000]],${externalID},${externalID}               ,${externalID},${externalID},${externalID}@example.org,Active,FALSE
+externalID                                     ,customText1  ,clientCorporation.externalID,firstName    ,lastName     ,email                    ,status,isDeleted
+JobSubmission-[[100|500|1000|5000|10000|50000]],${externalID},${externalID}               ,${externalID},${externalID},${externalID}@example.org,Active,FALSE
