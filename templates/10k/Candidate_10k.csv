@@ -1,0 +1,2 @@
+linkedPerson.customText1,externalID                      ,customText1                     ,firstName                       ,lastName                        ,email                                       ,status,isDeleted
+Candidate-10k           ,${linkedPerson.externalID}-{{i}},${linkedPerson.externalID}-{{i}},${linkedPerson.externalID}-{{i}},${linkedPerson.externalID}-{{i}},${linkedPerson.externalID}-{{i}}@example.org,Active,FALSE
