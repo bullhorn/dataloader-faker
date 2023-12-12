@@ -1,0 +1,2 @@
+clientCorporation.externalID,customText1                          ,externalID                           ,title                                ,isDeleted
+Opportunity-10k             ,${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},FALSE
