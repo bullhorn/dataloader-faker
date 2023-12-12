@@ -1,2 +1,2 @@
-externalID                                  ,customText1  ,clientCorporation.externalID,firstName    ,lastName     ,email                    ,status,isDeleted
+externalID                           ,customText1  ,clientCorporation.externalID,firstName    ,lastName     ,email                    ,status,isDeleted
 JobSubmission-[[100|1k|10k|50k|500k]],${externalID},${externalID}               ,${externalID},${externalID},${externalID}@example.org,Active,FALSE

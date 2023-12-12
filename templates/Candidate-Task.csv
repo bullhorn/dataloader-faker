@@ -1,2 +1,2 @@
-externalID                         ,customText1  ,firstName    ,lastName     ,email                    ,description                                 ,status,isDeleted,massMailOptOut
+externalID                  ,customText1  ,firstName    ,lastName     ,email                    ,description                                 ,status,isDeleted,massMailOptOut
 Task-[[100|1k|10k|50k|500k]],${externalID},${externalID},${externalID},${externalID}@example.org,Used for kicking off index associated events,Active,FALSE    ,TRUE

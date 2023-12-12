@@ -1,0 +1,2 @@
+clientCorporation.externalID,externalID                           ,customText1                          ,firstName                            ,lastName                             ,email                                            ,status,isDeleted
+ClientContact-500k          ,${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}}@example.org,Active,FALSE
