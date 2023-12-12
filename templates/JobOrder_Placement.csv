@@ -1,0 +1,2 @@
+externalID                       ,clientCorporation.externalID,clientContact.externalID,title        ,description                                 ,publicDescription
+Placement-[[100|1k|10k|50k|500k]],${externalID}               ,${externalID}           ,${externalID},Used for kicking off index associated events,Used for kicking off index associated events
