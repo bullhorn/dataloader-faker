@@ -1,0 +1,2 @@
+clientCorporation.externalID,customText1                          ,firstName                            ,lastName                             ,email                                            ,status,isDeleted
+Lead-100                    ,${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}}@example.org,Active,FALSE
