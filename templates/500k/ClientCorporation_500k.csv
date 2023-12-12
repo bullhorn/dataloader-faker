@@ -1,0 +1,2 @@
+parentClientCorporation.externalID,name                                       ,companyDescription                         ,companyURL                                 ,status
+ClientCorporation-500k            ,${parentClientCorporation.externalID}-{{i}},${parentClientCorporation.externalID}-{{i}},${parentClientCorporation.externalID}-{{i}},Active
