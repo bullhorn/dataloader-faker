@@ -1,2 +1,0 @@
-clientCorporation.externalID,clientContact.externalID       ,externalID                           ,title                                ,description                          ,isOpen,isDeleted
-JobOrder-5k                 ,${clientCorporation.externalID},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},${clientCorporation.externalID}-{{i}},TRUE  ,FALSE
