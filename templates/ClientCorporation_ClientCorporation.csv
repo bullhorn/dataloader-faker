@@ -1,2 +1,0 @@
-externalID                               ,name         ,companyDescription                                ,companyURL   ,status
-ClientCorporation-[[100|1k|10k|50k|500k]],${externalID},Parent Client Corporation for ${externalID} update,${externalID},Active

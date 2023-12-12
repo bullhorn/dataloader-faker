@@ -1,2 +1,0 @@
-externalID                       ,customText1  ,clientCorporation.externalID,firstName    ,lastName     ,email                    ,status,isDeleted
-Candidate-[[100|1k|10k|50k|500k]],${externalID},${externalID}               ,${externalID},${externalID},${externalID}@example.org,Active,FALSE

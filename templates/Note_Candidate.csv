@@ -1,2 +1,0 @@
-externalID                       ,personReference.customText1,candidates.externalID,comments     ,action,isDeleted
-Candidate-[[100|1k|10k|50k|500k]],${externalID}              ,${externalID}-*      ,${externalID},Email ,FALSE
