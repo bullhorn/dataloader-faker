@@ -1,2 +1,2 @@
-branch.externalID   ,name                      ,companyDescription        ,companyURL                ,status
-ClientCorporation-1k,${branch.externalID}-{{i}},${branch.externalID}-{{i}},${branch.externalID}-{{i}},Active
+branch.externalID   ,externalID                ,name                      ,companyDescription        ,companyURL                ,status
+ClientCorporation-1k,${branch.externalID}-{{i}},${branch.externalID}-{{i}},${branch.externalID}-{{i}},${branch.externalID}-{{i}},Active
