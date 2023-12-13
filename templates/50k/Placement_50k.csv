@@ -1,2 +1,2 @@
-candidate.externalID,jobOrder.externalID    ,customText1                  ,status   ,comments      ,billRate,payRate,salary,isDeleted,isHidden
-JobSubmission-50k   ,${candidate.externalID},${candidate.externalID}-{{i}},Submitted,${customText1},      75,     45, 90000,FALSE    ,FALSE
+candidate.externalID,jobOrder.externalID    ,customText1                  ,status   ,comments      ,employmentType
+Placement-50k       ,${candidate.externalID},${candidate.externalID}-{{i}},Submitted,${customText1},Contract
