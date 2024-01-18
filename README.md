@@ -4,48 +4,20 @@ Generate massive amounts of realistic fake CSV data for [Data Loader](https://gi
 
 ### Get Started
 
-The templates directory contains an entire corporation full of fake data. Each entity will reference other entities in
-the same directory, same as the [dataloader examples](https://github.com/bullhorn/dataloader/tree/master/examples).
-Each entity file should contain the same number of rows as the other entities, and they can all be generated together
-by providing the number of desired rows. Lookup entities are the exception - there are only 10 of each generated.
+This branch creates large amounts of data that can generate associated index events by modifying a watched field
+on an entity to trigger a known amount of associated events. 
+
+Generate all data:
 
 ```
-// generate 10,000 records along with lookup entities
-npm start 10000
+npm start
 ```
 
-```
-// follow-on generation of 10,000 additional records, starting with id: 10001
-npm run generate -- -t templates -o generated -r 10000 -s 10001
-```
-
-When provided the number of rows = `n`, this will generate:
-
-- `n` Companies
-- `n` Contacts, one per company
-- `n` Jobs, one per company
-- `n` Candidates
-- `3n` Job Submissions, three per Candidate at one Job
-- `n` Placements, one per Candidate at one Job
-- `n` Locations, one per Company
-- `n` Invoice terms, one per Company
-- `n` Billing Profiles, one per Company
-- 10 General Ledger Accounts
-- 10 Invoice Statement Message Templates
-
-To load all of these records into a test corp, point Data Loader at the directory:
+Loading of data will take a while. This command will load all data at once, but that is risky. It's probably best
+to upload individual files at a time, from small to very large.
 
 ```
 dataloader load ../path/to/generated
-```
-
-### Customized Generation
-
-Given a template file and a location of an output file to generate, this method will generate
- an output file based on the provided template that contains the number of rows desired.
-
-```
-npm run generate -- --template path/to/templateFile.csv --output generatedOutputFile.csv --rows 1000
 ```
 
 ### The Template File Format
