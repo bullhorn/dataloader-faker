@@ -10,6 +10,7 @@ on an entity to trigger a known amount of associated events.
 Generate all data:
 
 ```
+npm install
 npm start
 ```
 
