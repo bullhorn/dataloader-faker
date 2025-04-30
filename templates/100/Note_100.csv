@@ -1,0 +1,2 @@
+personReference.name,externalID  ,action,minutesSpent,clientContacts.externalID,isDeleted,comments
+Note-100-A Note-100-A,Note-100-{{i}},Call 100,20         ,Note-100-[[A|B]],FALSE,test
